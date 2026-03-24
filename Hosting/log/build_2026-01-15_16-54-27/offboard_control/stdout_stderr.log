@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/offboard_control/offboard_control.egg-info
+writing ../../build/offboard_control/offboard_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/offboard_control/offboard_control.egg-info/dependency_links.txt
+writing entry points to ../../build/offboard_control/offboard_control.egg-info/entry_points.txt
+writing requirements to ../../build/offboard_control/offboard_control.egg-info/requires.txt
+writing top-level names to ../../build/offboard_control/offboard_control.egg-info/top_level.txt
+writing manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+reading manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dz/Hosting/build/offboard_control/build
+creating /home/dz/Hosting/build/offboard_control/build/lib
+creating /home/dz/Hosting/build/offboard_control/build/lib/offboard_control
+copying offboard_control/offboard_control.py -> /home/dz/Hosting/build/offboard_control/build/lib/offboard_control
+copying offboard_control/__init__.py -> /home/dz/Hosting/build/offboard_control/build/lib/offboard_control
+running install
+running install_lib
+creating /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control
+copying /home/dz/Hosting/build/offboard_control/build/lib/offboard_control/offboard_control.py -> /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control
+copying /home/dz/Hosting/build/offboard_control/build/lib/offboard_control/__init__.py -> /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control
+byte-compiling /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control/offboard_control.py to offboard_control.cpython-312.pyc
+byte-compiling /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/dz/Hosting/install/offboard_control/share/ament_index
+creating /home/dz/Hosting/install/offboard_control/share/ament_index/resource_index
+creating /home/dz/Hosting/install/offboard_control/share/ament_index/resource_index/packages
+copying resource/offboard_control -> /home/dz/Hosting/install/offboard_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/dz/Hosting/install/offboard_control/share/offboard_control
+running install_egg_info
+Copying ../../build/offboard_control/offboard_control.egg-info to /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control-0.0.0-py3.12.egg-info
+running install_scripts
+Installing offboard_control script to /home/dz/Hosting/install/offboard_control/lib/offboard_control
+writing list of installed files to '/home/dz/Hosting/build/offboard_control/install.log'

@@ -1,0 +1,25 @@
+[0.866s] Invoking command in '/home/dz/Hosting/src/offboard_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dz/Hosting/build/offboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/offboard_control build --build-base /home/dz/Hosting/build/offboard_control/build install --record /home/dz/Hosting/build/offboard_control/install.log --single-version-externally-managed install_data
+[1.115s] running egg_info
+[1.131s] writing ../../build/offboard_control/offboard_control.egg-info/PKG-INFO
+[1.132s] writing dependency_links to ../../build/offboard_control/offboard_control.egg-info/dependency_links.txt
+[1.132s] writing entry points to ../../build/offboard_control/offboard_control.egg-info/entry_points.txt
+[1.132s] writing requirements to ../../build/offboard_control/offboard_control.egg-info/requires.txt
+[1.132s] writing top-level names to ../../build/offboard_control/offboard_control.egg-info/top_level.txt
+[1.169s] reading manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+[1.170s] writing manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+[1.170s] running build
+[1.171s] running build_py
+[1.171s] copying offboard_control/offboard_control_1.py -> /home/dz/Hosting/build/offboard_control/build/lib/offboard_control
+[1.171s] running install
+[1.177s] running install_lib
+[1.194s] copying /home/dz/Hosting/build/offboard_control/build/lib/offboard_control/offboard_control_1.py -> /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control
+[1.195s] byte-compiling /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control/offboard_control_1.py to offboard_control_1.cpython-312.pyc
+[1.200s] running install_data
+[1.200s] running install_egg_info
+[1.220s] removing '/home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control-0.0.0-py3.12.egg-info' (and everything under it)
+[1.223s] Copying ../../build/offboard_control/offboard_control.egg-info to /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control-0.0.0-py3.12.egg-info
+[1.223s] running install_scripts
+[1.345s] Installing offboard_control script to /home/dz/Hosting/install/offboard_control/lib/offboard_control
+[1.345s] Installing offboard_control_1 script to /home/dz/Hosting/install/offboard_control/lib/offboard_control
+[1.345s] writing list of installed files to '/home/dz/Hosting/build/offboard_control/install.log'
+[1.392s] Invoked command in '/home/dz/Hosting/src/offboard_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dz/Hosting/build/offboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/offboard_control build --build-base /home/dz/Hosting/build/offboard_control/build install --record /home/dz/Hosting/build/offboard_control/install.log --single-version-externally-managed install_data

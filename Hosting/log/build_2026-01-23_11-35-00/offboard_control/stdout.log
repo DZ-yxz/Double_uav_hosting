@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/offboard_control/offboard_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/offboard_control/offboard_control.egg-info/dependency_links.txt
+writing entry points to ../../build/offboard_control/offboard_control.egg-info/entry_points.txt
+writing requirements to ../../build/offboard_control/offboard_control.egg-info/requires.txt
+writing top-level names to ../../build/offboard_control/offboard_control.egg-info/top_level.txt
+reading manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/offboard_control/offboard_control.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/offboard_control/offboard_control.egg-info to /home/dz/Hosting/install/offboard_control/lib/python3.12/site-packages/offboard_control-0.0.0-py3.12.egg-info
+running install_scripts
+Installing offboard_control script to /home/dz/Hosting/install/offboard_control/lib/offboard_control
+writing list of installed files to '/home/dz/Hosting/build/offboard_control/install.log'
