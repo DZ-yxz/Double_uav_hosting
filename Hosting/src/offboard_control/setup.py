@@ -28,6 +28,7 @@ setup(
             'offboard_control_1 = offboard_control.offboard_control_1:main',
             'offboard_control_2 = offboard_control.offboard_control_2:main',
             'offboard_control_fuzzy = offboard_control.offboard_control_fuzzy:main',
+            'offboard_control_fxtsmc = offboard_control.offboard_control_fxtsmc:main',
         ],
     },
 )
