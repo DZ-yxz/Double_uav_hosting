@@ -45,8 +45,8 @@ MAX_THRUST = 30.0     # 最大推力 (N)，用于归一化
 MAX_TORQUE_XY = 1.0   # 滚转/俯仰最大力矩 (N·m)
 MAX_TORQUE_Z = 0.5    # 偏航最大力矩 (N·m)
 
-# 防奇异小量: 避免 |e_ω|=0 时出现 |e_ω|^(p-1) 发散
-EPSILON_SINGULARITY = 1e-6
+# 内环防奇异最小误差: 避免 |e_ω|→0 时 |e_ω|^(p-1) 发散 (NaN/Inf)
+MIN_ERROR_THRESHOLD = 1e-3
 # 最小推力因子: 防止推力向量为零导致除零错误 (悬停推力的 10%)
 MIN_THRUST_FACTOR = 0.1
 
@@ -161,6 +161,12 @@ class FxTSMCController:
         # 期望加速度 (反步法二阶项)
         a_des = acc_d - BS_KP * e_p - BS_KV * e_v
 
+        # ---- 饱和处理：防止翻转和极端垂直运动 ----
+        # 水平加速度限幅: 约35°倾斜角对应 ~6.8 m/s²
+        a_des[:2] = np.clip(a_des[:2], -6.8, 6.8)
+        # 垂直加速度限幅: 防止极端自由落体或急剧上升
+        a_des[2] = np.clip(a_des[2], -5.0, 5.0)
+
         # ---- 推力向量 (NED) ----
         # F_des = m*(a_des - g_NED), g_NED = [0,0,g] in NED (+z down)
         g_ned = np.array([0.0, 0.0, GRAVITY])
@@ -251,11 +257,12 @@ class FxTSMCController:
 
         # ---- Φ 矩阵对角元素 ----
         # Φᵢ = 1 + a·p·|e_ωᵢ|^(p−1) + b·q·|e_ωᵢ|^(q−1)
-        # 使用 EPSILON_SINGULARITY 避免 |e_ω|=0 时出现奇异
+        # 将 |e_ω| 限制到最小值 MIN_ERROR_THRESHOLD，防止负指数项在误差接近零时发散 (NaN/Inf)
         abs_e = np.abs(e_omega)
+        abs_e_safe = np.maximum(abs_e, MIN_ERROR_THRESHOLD)
         phi_diag = (1.0
-                    + SMC_A * SMC_P * (abs_e + EPSILON_SINGULARITY) ** (SMC_P - 1.0)
-                    + SMC_B * SMC_Q * (abs_e + EPSILON_SINGULARITY) ** (SMC_Q - 1.0))
+                    + SMC_A * SMC_P * abs_e_safe ** (SMC_P - 1.0)
+                    + SMC_B * SMC_Q * abs_e_safe ** (SMC_Q - 1.0))
 
         # ---- 固定时间趋近律 ----
         reaching = (-SMC_K1 * sig(S, SMC_ALPHA1)
